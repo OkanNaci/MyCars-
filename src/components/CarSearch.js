@@ -1,10 +1,4 @@
 function CarSearch() {
-  return (
-    <div>
-      <p>My Cars</p>
-      <label>Search</label>
-      <input />
-    </div>
-  );
+  return;
 }
 export default CarSearch;
