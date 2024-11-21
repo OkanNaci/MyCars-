@@ -15,9 +15,13 @@ function CarList() {
   const handleCarDelete = (car) => {
     dispatch(removeCar(car.id));
   };
+  const name = useSelector((state) => {
+    return state.form.name;
+  });
   const renderedCars = cars.map((car) => {
+    const bold = name && car.name.toLowerCase().includes(name.toLowerCase());
     return (
-      <div key={car.id} className="panel">
+      <div key={car.id} className={`panel ${bold && "bold"}`}>
         <p>
           {car.name} - ${car.cost}
         </p>
